@@ -1,27 +1,26 @@
-import React, { Suspense } from "react";
-import './styles/index.scss'
-import { useTheme } from "./providers/ThemeProvider";
-import { classNames } from "shared/lib/helpers/classNames/classNames";
-import { AppRouter } from "./providers/router";
-import { Navbar } from "widgets/Navbar";
-import { Sidebar } from "widgets/Sidebar/ui/indexx";
-
+import React, { Suspense } from 'react';
+import './styles/index.scss';
+import { classNames } from 'shared/lib/helpers/classNames/classNames';
+import { Navbar } from 'widgets/Navbar';
+import { Sidebar } from 'widgets/Sidebar/ui/indexx';
+import { AppRouter } from './providers/router';
+import { useTheme } from './providers/ThemeProvider';
 
 const App = () => {
-const {theme} =useTheme();
+    const { theme } = useTheme();
 
-    return ( 
+    return (
         <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback=''>
-                <Navbar/>  
+            <Suspense fallback="">
+                <Navbar />
                 <div className="content-page">
-                    <Sidebar/>
-                    <AppRouter/>
-                 </div>       
-           </Suspense>
-            
+                    <Sidebar />
+                    <AppRouter />
+                </div>
+            </Suspense>
+
         </div>
-     );
-}
- 
+    );
+};
+
 export default App;
