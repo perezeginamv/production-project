@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: ["plugin:react/recommended", "airbnb", "plugin:i18next/recommended"],
   parser: "@typescript-eslint/parser",
@@ -36,6 +37,7 @@ module.exports = {
       "always" | "never" | "multiline" | "multiprop" | "multiline-multiprop",
     "react/button-has-type": "off",
     "i18next/no-literal-string": ["error", { markupOnly: true }],
+    "eslint linebreak-style": ["error", "windows"],
   },
   globals: {
     __IS_DEV__: true,
