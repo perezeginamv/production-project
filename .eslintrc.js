@@ -4,6 +4,7 @@ module.exports = {
     es2021: true,
     jest: true,
   },
+
   extends: ["plugin:react/recommended", "airbnb", "plugin:i18next/recommended"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -37,7 +38,8 @@ module.exports = {
       "always" | "never" | "multiline" | "multiprop" | "multiline-multiprop",
     "react/button-has-type": "off",
     "i18next/no-literal-string": ["error", { markupOnly: true }],
-    "eslint linebreak-style": ["error", "windows"],
+    "max-len": ["error", { ignoreComments: true }],
+    quotes: [2, "single", { avoidEscape: true, allowTemplateLiterals: true }],
   },
   globals: {
     __IS_DEV__: true,
