@@ -3,9 +3,12 @@
         "public/locales",
         "src/shared/config/i18n"
     ],
-    "i18n-ally.keystyle": "nested",
     "eslint.autoFixOnSave": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    }
+        "source.fixAll.eslint": "explicit"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "i18n-ally.keystyle": "flat",
 }
