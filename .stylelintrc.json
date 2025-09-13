@@ -7,7 +7,6 @@
     "scss/double-slash-comment-whitespace-inside": null,
     "no-missing-end-of-source-newline": null,
    "indent": ["error", 2, { "MemberExpression": 1 }],
-   "indentation": [ 4],
-   "stylelint-disable-next-line indent":null
+   "indentation": [4]
   }
 }
