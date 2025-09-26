@@ -2,11 +2,6 @@
   "extends": "stylelint-config-standard-scss",
   "rules": {
     "indentation": [4],
-    "selector-class-pattern": null,
-    "scss/operator-no-unspaced": null,
-    "scss/double-slash-comment-whitespace-inside": null,
-    "no-missing-end-of-source-newline": null,
-   "indent": ["error", 2, { "MemberExpression": 1 }],
-   "indentation": [4]
+    "selector-class-pattern": null
   }
 }
