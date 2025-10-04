@@ -3,27 +3,26 @@ on:
   push:
      branches: [ master ]
   pull_request:
-     branches: [ master ]      
-jobs:
+     branches: [ master ]
+  jobs:
   pipline:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
           node-version: [ 17.x ]
-
     steps:
-    -users: actions/checkout@v2
-    -name: Starting Node.js ${{ matrix.node-version}}
-    users: actions/setup-node@v1
-    with:
-      node-version: ${{ matrix.node-version}}
-    -name: install modules
-    run: npm install
-    -name: build production project
-    run: npm run build:prod
-    -name: linting typescript
-    run: npm run lint:ts
-    -name: linting css
-    run: npm run lint:css
-    -name: unit testing
-    run: npm run test:unit
+      - users: ctions/checkout@v2
+      - name: Starting Node.js ${{ matrix.node-version}}
+        users: actions/setup-node@v1
+        with:
+        node-version: ${{ matrix.node-version}}
+      - name: install modules
+        run: npm install
+      - name: build production project
+        run: npm run build:prod
+      - name: linting typescript
+        run: npm run lint:ts
+      - name: linting css
+        run: npm run lint:css    
+      - name: unit testing
+        run: npm run test:unit      
