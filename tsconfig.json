@@ -12,8 +12,9 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
+    "ignoreDeprecations": "6.0",
     //для абсолютного импорта
-    // "baseUrl": ".",
+    "baseUrl": ".",
     "paths": {
       "*": [
         "./src/*"
