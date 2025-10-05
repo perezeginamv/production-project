@@ -3,6 +3,9 @@
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "ESNext",
+    "types": [
+      "node"
+    ],
     // В какую спецификацию компилируем: для поддержки большинства браузеров
     "target": "es5",
     // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
@@ -10,7 +13,7 @@
     "allowJs": true,
     "moduleResolution": "node",
     //для абсолютного импорта
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "paths": {
       "*": [
         "./src/*"
