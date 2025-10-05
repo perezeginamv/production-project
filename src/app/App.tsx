@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense } from 'react';
 import './styles/index.scss';
 import { classNames } from 'shared/lib/helpers/classNames/classNames';
 import { Sidebar } from 'widgets/Sidebar/ui';
