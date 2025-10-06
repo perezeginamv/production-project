@@ -1,5 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Navbar } from './Navbar';
@@ -14,8 +15,8 @@ export default {
 
 const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
 
-export const Ligth = Template.bind({});
-Ligth.args = {};
+export const Light = Template.bind({});
+Light.args = {};
 
 export const Dark = Template.bind({});
 Dark.args = {};

@@ -1,12 +1,12 @@
 import React, { Suspense } from 'react';
 import './styles/index.scss';
+import { Navbar } from 'widgets/Navbar';
 import { classNames } from 'shared/lib/helpers/classNames/classNames';
 import { Sidebar } from 'widgets/Sidebar/ui';
-import { Navbar } from 'widgets/Navbar';
-import { useTheme } from './providers/ThemeProvider';
 import { AppRouter } from './providers/router';
+import { useTheme } from './providers/ThemeProvider';
 
-const App = () => {
+function App() {
     const { theme } = useTheme();
 
     return (
@@ -20,6 +20,6 @@ const App = () => {
             </Suspense>
         </div>
     );
-};
+}
 
 export default App;
