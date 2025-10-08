@@ -5,12 +5,12 @@ on:
   pull_request:
     branches: [ master ]
 jobs:
-  pipeline:
-    runs-on: ${{ matrix.os }}
+  pipeline:   
     strategy:
       matrix:
-        os: [ windows-2019]
+        os: [windows-2019]
         node-version: [ 17.x ]
+        runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v2
