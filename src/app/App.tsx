@@ -1,5 +1,6 @@
-import React, { Suspense } from 'react';
-import './styles/index.scss';
+/* eslint-disable i18next/no-literal-string */
+/* eslint-disable react/button-has-type */
+import React, { Suspense, useState } from 'react';
 import { classNames } from 'shared/lib/helpers/classNames/classNames';
 import { Sidebar } from 'widgets/Sidebar/ui';
 import { Navbar } from 'widgets/Navbar';
