@@ -13,7 +13,6 @@ interface SidebarProps {
 
 export const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
-    const [test, setTest] = useState(0);
     const onToggle = () => {
         setCollapsed((prev) => !prev);
     };
@@ -40,7 +39,6 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 {collapsed ? '>' : '<'}
             </Button>
             <div className={cls.items}>
-                <button type="button" onClick={() => setTest(test + 1)}>{test}</button>
                 {SidebarItemsList.map((item) => (
                     <SidebarItem
                         item={item}

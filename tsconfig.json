@@ -11,6 +11,7 @@
     // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
     "jsx": "react-jsx",
     "allowJs": true,
+    "strict": true,
     "moduleResolution": "node",
     "ignoreDeprecations": "6.0",
     //для абсолютного импорта
