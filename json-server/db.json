@@ -25,14 +25,5 @@
       "password": "123"
     }
   ],
-  "profile": { 
-    "first": "Елена",
-    "lastname":"Прекрасная",
-    "age":22,
-    "currency":"RUB",
-    "country":"Russia",
-    "city":"Moscow",
-    "username":"admin",
-    "avatar":""
-  }
+  "profile": {}
 }
