@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": {}
+  "profile": {
+    "first": "Поля",
+    "lastname": "Прекрасная",
+    "age": 23,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Moscow",
+    "username": "admin213",
+    "avatar": "https://avatars.mds.yandex.net/i?id=7cc3d6dd2ad75709f8f35da570f76ead80e6a1e6-5230098-images-thumbs&n=13"
+  }
 }
