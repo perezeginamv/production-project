@@ -22,7 +22,7 @@ export const loginByUsername = createAsyncThunk<
     async (authData, thunkApi) => {
         const { extra, dispatch, rejectWithValue } = thunkApi;
         try {
-            const response = await extra.api.post(
+            const response = await extra.api.post<User>(
                 '/login',
                 authData,
             );
