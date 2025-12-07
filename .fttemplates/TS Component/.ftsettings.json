@@ -1,0 +1,7 @@
+{
+  "name": "TS Component",
+  "openFilesWhenDone": ["<FTName>.tsx", "<FTName>.module.scss", "<FTName>.stories.ts"],
+  "omitParentDirectory": true,
+  "overwriteExistingFiles": "never",
+  "customVariables": ["interfaceFirstProp", "interfaceFirstPropType=>string"]
+}

@@ -15,4 +15,7 @@
     "css.validate": false,
     "less.validate": false,
     "scss.validate": false,
+    "files.associations": {
+        "**/.fttemplates/**": "plaintext",
+    }
 }
