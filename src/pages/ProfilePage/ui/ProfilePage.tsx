@@ -42,6 +42,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
         [ValidateProfileError.INCORRECT_CITY]: t('Некорректный город'),
         [ValidateProfileError.INCORRECT_USER_DATA]: t('Имя и фамилия обязательны'),
         [ValidateProfileError.NO_DATA]: t('Данные не указаны'),
+
     };
 
     useEffect(() => {

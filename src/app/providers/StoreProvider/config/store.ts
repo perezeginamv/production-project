@@ -6,7 +6,6 @@ import {
 } from '@reduxjs/toolkit';
 import { counterReducer } from 'entities/Counter';
 import { userReducer } from 'entities/User';
-import { Reducer } from 'react';
 import { NavigateOptions, To } from 'react-router-dom';
 import { $api } from 'shared/api/api';
 import { StateSchema, ThunkExtraArg } from './StateSchema';

@@ -1,3 +1,7 @@
 {
-    "ARTICLE DETAILS PAGE": "ARTICLE DETAILS PAGE"
+  "ARTICLE DETAILS": "ARTICLE DETAILS",
+  "ARTICLE DETAILS PAGE": "ARTICLE DETAILS PAGE",
+  "ERROR": "ERROR",
+  "Произошла ошибка при загрузке статьи": "There was an error loading the article.",
+  "Статья не найдена": "Article not found"
 }

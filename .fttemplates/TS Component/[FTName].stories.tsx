@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { [FTName] } from './ [FTName]';
+import { [FTName] } from './[FTName]';
 
 export default {
     title: 'shared/ [FTName]',

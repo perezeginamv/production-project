@@ -1,8 +1,13 @@
 {
-    "i18n-ally.localesPaths": [
-        "public/locales",
-        "src/shared/config/i18n"
-    ],
+    // "i18n-ally.localesPaths": [
+    //     "public/locales",
+    //     "src/shared/config/i18n"
+    // ],
+    // "i18n-ally.keystyle": "flat",
+    // "i18n-ally.localesPaths": [
+    //     "public/locales",
+    //     "src/shared/config/i18n"
+    // ],
     "eslint.autoFixOnSave": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit",
@@ -11,11 +16,21 @@
     "[javascript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
-    "i18n-ally.keystyle": "flat",
     "css.validate": false,
     "less.validate": false,
     "scss.validate": false,
     "files.associations": {
         "**/.fttemplates/**": "plaintext",
-    }
+    },
+    "i18n-ally.localesPaths": [
+        "public/locales",
+        "src/shared/config/i18n"
+    ], // Папка с файлами локализации
+    "i18n-ally.keystyle": "flat", // Стиль ключей: nested или flat
+    "i18n-ally.locales": [
+        "en",
+        "ru"
+    ], // Языковые ключи в проекте
+    "i18n-ally.namespace": "", // Если используете неймспейсы
+    "i18n-ally.defaultNamespace": ""
 }

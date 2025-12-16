@@ -13,6 +13,7 @@ const ArticlesPage = (props: ArticlePageProps) => {
     return (
         <div className={classNames(cls.ArticlePage, {}, [className])}>
             {t('ARTICLES PAGE')}
+            {t('ARTICLES fff')}
         </div>
     );
 };
