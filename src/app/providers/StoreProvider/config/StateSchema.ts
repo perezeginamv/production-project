@@ -1,3 +1,4 @@
+import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
 import {
     AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
@@ -8,6 +9,7 @@ import { ProfileSchema } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
 import { NavigateOptions, To } from 'react-router-dom';
+import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 
 export interface StateSchema {
     counter: CounterSchema,
@@ -16,7 +18,8 @@ export interface StateSchema {
     // Ассинхронные редюсеры
     loginForm?: LoginSchema,
     profile?: ProfileSchema,
-    articleDetails?: ArticleDetailsSchema
+    articleDetails?: ArticleDetailsSchema,
+    articleDetailsComments?: ArticleDetailsCommentsSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
