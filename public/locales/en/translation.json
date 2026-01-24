@@ -1,8 +1,9 @@
 {
   "PROFILE PAGE": "Profile page",
-  "Профиль": "Profile",
   "Введите имя": "Enter name",
   "Введите пароль": "Enter password",
+  "Введите текст комментаия >": "Enter your comment text >",
+  "Введите текст комментария": "Enter your comment text",
   "Войти": "Log in",
   "Вы ввели неверный логин или пароль ": "An unforeseen mistake occurred",
   "Выйти": "Log out",
@@ -11,16 +12,18 @@
   "Кратко": "En",
   "О сайте": "About us",
   "Обновить страницу": "Refresh page",
+  "Отправить": "Send",
   "Ошибка": "throw error",
   "Перевод": "Translation",
   "Переключение": "Toggle",
   "Произошла непредвиденная ошибка": "",
+  "Профиль": "Profile",
+  "Статьи": "Articles",
   "Страница не найдена": "Page not found",
   "Тест": "Test",
   "Толкни": "",
   "Увеличение": "Increment",
   "Уменьшение": "Decrement",
   "Форма авторизации": "Auth form",
-  "Язык": "English", 
-  "Статьи": "Articles"
+  "Язык": "English"
 }

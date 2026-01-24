@@ -12,6 +12,7 @@ const data = {
     first: 'adscs',
     currency: Currency.EUR,
     lastname: 'fsdvsdv',
+    id: '1',
 };
 
 describe('updateProfileData.test', () => {
