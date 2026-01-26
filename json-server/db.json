@@ -161,8 +161,8 @@
   "profile": [
     {
       "id": "1",
-      "first": "Поля1",
-      "lastname": "Прекрасная",
+      "first": "Валера",
+      "lastname": "Знает",
       "age": 27,
       "currency": "RUB",
       "country": "Russia",
@@ -172,8 +172,8 @@
     },
     {
       "id": "2",
-      "first": "Полина",
-      "lastname": "Великая",
+      "first": "Жанклод",
+      "lastname": "Вандам",
       "age": 23,
       "currency": "RUB",
       "country": "Belarus",
