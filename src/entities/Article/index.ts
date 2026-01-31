@@ -1,5 +1,9 @@
+import {
+    ArticleList,
+} from './ui/ArticleList/ArticleList';
+
 export {
-    Article,
+    Article, ArticleView,
 } from './model/types/article';
 export {
     ArticleDetails,
