@@ -1,4 +1,3 @@
-import { classNames } from 'shared/lib/helpers/classNames/classNames';
 import {
     memo,
     MutableRefObject,
@@ -6,14 +5,15 @@ import {
     useRef,
     UIEvent,
 } from 'react';
-import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { getUIScrollByPath, UIActions } from 'features/UI';
 import { useLocation } from 'react-router-dom';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useSelector } from 'react-redux';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { StateSchema } from 'app/providers/StoreProvider';
+import { getUIScrollByPath, UIActions } from 'features/UI';
+import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
+import { classNames } from 'shared/lib/helpers/classNames/classNames';
 import cls from './Page.module.scss';
 
 interface PageProps {
@@ -55,7 +55,7 @@ export const Page = memo((props: PageProps) => {
             onScroll={onScroll}
         >
             {children}
-            <div ref={triggerRef} />
+            {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
         </section>
     );
 });
