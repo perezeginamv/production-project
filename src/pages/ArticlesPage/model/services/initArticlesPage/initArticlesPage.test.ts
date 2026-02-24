@@ -26,12 +26,12 @@ describe('initArticlesPage.test', () => {
         });
 
         const params = new URLSearchParams();
-        params.append('page', String(1));
+        params.append('order', String('desc'));
 
         await thunk.callThunk(params);
 
-        expect(thunk.dispatch).toBeCalledTimes(4);
-        expect(fetchArticlesList).toBeCalledWith({ page: 1 });
+        expect(thunk.dispatch).toBeCalledTimes(5);
+        expect(fetchArticlesList).toBeCalledWith({});
     });
 
     test('inited - true', async () => {
@@ -52,9 +52,7 @@ describe('initArticlesPage.test', () => {
             },
         });
         const params = new URLSearchParams();
-        params.append('page', String(1));
-
-        await thunk.callThunk(params);
+        params.append('order', String('desc'));
 
         await thunk.callThunk(params);
 
