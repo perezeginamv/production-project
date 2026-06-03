@@ -5,6 +5,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import { BuildOptions } from './types/config';
+import path from 'path';
 
 export function buildPlugins({
     paths,
@@ -15,6 +16,7 @@ export function buildPlugins({
     const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,
+            favicon: path.resolve(paths.public, 'favicon.ico'),
         }),
         new webpack.ProgressPlugin(),
         new MiniCssExtractPlagin({

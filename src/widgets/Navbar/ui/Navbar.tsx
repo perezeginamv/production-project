@@ -39,7 +39,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <Text
                     className={cls.appName}
-                    title={t('Ulbi TV App')}
+                    title={t('Dvoi_Nyashka App')}
                     theme={TextThema.INVERTED}
                 />
                 <AppLink

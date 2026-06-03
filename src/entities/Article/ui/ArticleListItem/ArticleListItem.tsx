@@ -14,12 +14,14 @@ import {
 } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
+import { ARTICLE_LIST_ITEM_LOCALSTORAGE_IDX } from 'shared/const/localstorage';
 
 interface ArticleListItemProps {
     className?: string,
     article: Article,
     view: ArticleView,
-    target?: HTMLAttributeAnchorTarget
+    target?: HTMLAttributeAnchorTarget;
+    index: number
 }
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
     const {
@@ -27,7 +29,9 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         article,
         view,
         target,
+        index
     } = props;
+
     const { t } = useTranslation();
 
     const types = <Text text={article.type.join(', ')} className={cls.types} />;
@@ -37,6 +41,10 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             <Icon Svg={EyeIcon} />
         </>
     );
+
+    const handleButtonClick = () => {
+        sessionStorage.setItem(ARTICLE_LIST_ITEM_LOCALSTORAGE_IDX, JSON.stringify(index))
+    }
 
     if (view === ArticleView.BIG) {
         const textBlock = article.blocks.find(
@@ -62,7 +70,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                             target={target}
                             to={RoutePath.article_details + article.id}
                         >
-                            <Button theme={ButtonTheme.OUTLINE}>
+                            <Button theme={ButtonTheme.OUTLINE} onClick={handleButtonClick}>
                                 {t('Читать далее')}
                             </Button>
                         </AppLink>
@@ -78,6 +86,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             target={target}
             to={RoutePath.article_details + article.id}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+            onClick={handleButtonClick}
         >
             <Card className={cls.card}>
                 <div className={cls.imageWrapper}>
