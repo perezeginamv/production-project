@@ -44,6 +44,7 @@ export const articlesPageSlice = createSlice({
         setView: (state, action: PayloadAction<ArticleView>) => {
             state.view = action.payload;
             localStorage.setItem(ARTICLES_VIEW_LOCALSTORAGE_KEY, action.payload);
+            state.limit = action.payload === ArticleView.SMALL ? 9 : 4;
         },
         setPage: (state, action: PayloadAction<number>) => {
             state.page = action.payload;
@@ -63,7 +64,7 @@ export const articlesPageSlice = createSlice({
         initState: (state) => {
             const view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView;
             state.view = view;
-            state.limit = view === ArticleView.BIG ? 4 : 9;
+            state.limit = view === ArticleView.SMALL ? 9 : 4;
             state._inited = true;
         },
     },

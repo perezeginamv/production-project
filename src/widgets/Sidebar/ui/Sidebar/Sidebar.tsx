@@ -20,7 +20,6 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     };
 
     return (
-
         <menu
             data-testid="sidebar"
             className={classNames(

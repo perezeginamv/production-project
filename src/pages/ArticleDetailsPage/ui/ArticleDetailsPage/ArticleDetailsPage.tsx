@@ -55,6 +55,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
     if (!id) {
         return (
+
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 {t('Статья не найдена')}
             </Page>
@@ -63,6 +64,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />

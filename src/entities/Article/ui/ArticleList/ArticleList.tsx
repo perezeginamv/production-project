@@ -41,14 +41,13 @@ export const ArticleList = memo((props: ArticleListProps) => {
         onLoadNextPart,
     } = props;
 
-
     const { t } = useTranslation();
 
     const [selectedArticleId, setSelectedArticleId] = useState(1)
     const virtuosoGridRef = useRef<VirtuosoGridHandle>(null)
 
     useEffect(() => {
-        const paged = sessionStorage.getItem(ARTICLE_LIST_ITEM_LOCALSTORAGE_IDX) || 1
+        const paged = sessionStorage.getItem(ARTICLE_LIST_ITEM_LOCALSTORAGE_IDX) || 0
         setSelectedArticleId(+paged)
     }, [])
 
@@ -61,7 +60,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
                 }
             }, 100)
         }
-
         return () => clearTimeout(timeoutId)
     }, [view, selectedArticleId])
 

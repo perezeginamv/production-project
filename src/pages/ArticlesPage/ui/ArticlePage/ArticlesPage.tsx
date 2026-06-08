@@ -17,10 +17,6 @@ import {
     getArticles,
 } from '../../model/slices/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
-import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
-import { TestVirtuoso } from 'entities/Article/ui/ArticleList/TestVirtuoso';
-import { classNames } from 'shared/lib/helpers/classNames/classNames';
-import { Page } from 'widgets/Page/Page';
 
 interface ArticlePageProps {
     className?: string
@@ -40,7 +36,9 @@ const ArticlesPage = (props: ArticlePageProps) => {
     const [searchParams] = useSearchParams();
 
     const onLoadNextPart = useCallback(() => {
+        // debugger;
         dispatch(fetchNextArticlesPage());
+        console.log('Вызывается ');
     }, [dispatch]);
 
     useInitialEffect(() => {
@@ -56,9 +54,6 @@ const ArticlesPage = (props: ArticlePageProps) => {
                 className={cls.list}
                 onLoadNextPart={onLoadNextPart}
             />
-            {/* <ArticlesPageFilters /> */}
-
-            {/* <TestVirtuoso /> */}
         </DynamicModuleLoader>
     );
 };
